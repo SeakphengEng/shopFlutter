@@ -24,7 +24,7 @@ class _MyHomePageState extends State<MyHomePage> {
     this.context = context;
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Girlies"),
+        title: new Text("De Shoping"),
         centerTitle: true,
         actions: <Widget>[
           new IconButton(icon: new Icon(Icons.favorite,color: Colors.white,), onPressed: ()
@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     children: <Widget>[
                                       new Text("${storeItems[index].itemName.substring(0,8)}...",style: new TextStyle(fontWeight:FontWeight.w700,fontSize: 16.0,color:Colors.white ),
                                       ),
-                                      new Text("N${storeItems[index].itemPrice}",style: new TextStyle(color: Colors.red[500],
+                                      new Text("${storeItems[index].itemPrice}៛",style: new TextStyle(color: Colors.red[500],
                                           fontWeight: FontWeight.w700),)
                                     ],
                                   ),
@@ -171,8 +171,8 @@ class _MyHomePageState extends State<MyHomePage> {
       drawer: new Drawer(
         child: new Column(
           children: <Widget>[
-            new UserAccountsDrawerHeader(accountName: new Text("Dennis Githinji"),
-                accountEmail: new Text("wakahiad@gmail.com"),
+            new UserAccountsDrawerHeader(accountName: new Text("Eng Seakpheng"),
+                accountEmail: new Text("pheng0498@gmail.com"),
             currentAccountPicture:new CircleAvatar(backgroundColor: Colors.white,
             child: new Icon(Icons.person),
             ) ,),

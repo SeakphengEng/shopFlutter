@@ -24,7 +24,7 @@ class _ItemDetailsState extends State<ItemDetails> {
      Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: new AppBar(
-        title: new Text("Item Details"),
+        title: new Text("Details"),
         centerTitle: false,
         iconTheme: IconThemeData(color: Colors.white),
       ),
@@ -105,7 +105,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                             ],
                           ),
                           new Text(
-                             "N${widget.itemPrice}",
+                             "${widget.itemPrice}៛",
                                style: new TextStyle(
                                    fontSize: 20.0,
                                    color: Colors.red[500],
