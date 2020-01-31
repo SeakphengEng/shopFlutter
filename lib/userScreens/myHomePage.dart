@@ -94,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   child: new Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
-                                      new Text("${storeItems[index].itemName.substring(0,8)}...",style: new TextStyle(fontWeight:FontWeight.w700,fontSize: 16.0,color:Colors.white ),
+                                      new Text("${storeItems[index].itemName.substring(0,7)}...",style: new TextStyle(fontWeight:FontWeight.w700,fontSize: 16.0,color:Colors.white ),
                                       ),
                                       new Text("${storeItems[index].itemPrice}៛",style: new TextStyle(color: Colors.red[500],
                                           fontWeight: FontWeight.w700),)
