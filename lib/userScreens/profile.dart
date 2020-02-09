@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-class GirliesProfile extends StatefulWidget {
+class Profile extends StatefulWidget {
   @override
-  _GirliesProfileState createState() => _GirliesProfileState();
+  _Profile createState() => _Profile();
 }
 
-class _GirliesProfileState extends State<GirliesProfile> {
+class _Profile extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +13,7 @@ class _GirliesProfileState extends State<GirliesProfile> {
         centerTitle: false,
       ),
       body: new Center(
-        child: new Text("My Profile",
+        child: new Text("Your Profile",
           style: new TextStyle(fontSize: 25.0),
         ),
       ),

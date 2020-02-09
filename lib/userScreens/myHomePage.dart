@@ -3,12 +3,11 @@ import 'package:flutter/cupertino.dart';
 import 'favourites.dart';
 import 'messages.dart';
 import 'cart.dart';
-import 'notifications.dart';
-import 'history.dart';
-import 'delivery.dart';
+import 'recommendation.dart';
+import 'map.dart';
 import 'profile.dart';
 import 'aboutus.dart';
-import 'loginlogout.dart';
+import 'logout.dart';
 import 'package:shop_app/tools/Store.dart';
 import 'items_details.dart';
 
@@ -20,14 +19,15 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   BuildContext context;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     this.context = context;
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("De Shoping"),
+        title: new Text("Food App"),
         centerTitle: true,
         actions: <Widget>[
-          new IconButton(icon: new Icon(Icons.favorite,color: Colors.white,), onPressed: ()
+          new IconButton(icon: new Icon(Icons.favorite,color: Colors.white,), 
+          onPressed: ()
           {
             Navigator.of(context).push(new CupertinoPageRoute(builder:(BuildContext context){
               return new Girliesfavourites();
@@ -174,43 +174,51 @@ class _MyHomePageState extends State<MyHomePage> {
             new UserAccountsDrawerHeader(accountName: new Text("Eng Seakpheng"),
                 accountEmail: new Text("pheng0498@gmail.com"),
             currentAccountPicture:new CircleAvatar(backgroundColor: Colors.white,
-            child: new Icon(Icons.person),
-            ) ,),
+            child: Icon(Icons.account_circle,
+              size: 70,
+              ),
+            ),),
+
+            // Home Screen
             new ListTile(
               leading: new CircleAvatar(
-                child: new Icon(Icons.notifications,
+                child: new Icon(Icons.home,
                   color: Colors.white,
-                size: 20.0,
+                  size: 20.0,
                 ),
               ),
-              title: new Text("Order Notifications"),
+              title: new Text("Home"),
               onTap:()
               {
                 Navigator.of(context).push(new CupertinoPageRoute(
                     builder: (BuildContext context)
                     {
-                      return new GirliesNotifications();
+                      return new MyHomePage();
                     }));
               },
             ),
+
+            //Recommendation
             new ListTile(
               leading: new CircleAvatar(
-                child: new Icon(Icons.history,
+                child: new Icon(Icons.lightbulb_outline,
                   color: Colors.white,
                   size: 20.0,
                 ),
               ),
-              title: new Text("Order History"),
+              title: new Text("Recommedation"),
               onTap: ()
               {
                 Navigator.of(context).push(new CupertinoPageRoute(
                     builder: (BuildContext context)
                     {
-                      return new GirliesHistory();
+                      return new Recommendation();
                     }));
               },
             ),
-            new Divider(),
+
+
+            //Profile Settings
             new ListTile(
               leading: new CircleAvatar(
                 child: new Icon(Icons.person,
@@ -224,24 +232,26 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.of(context).push(new CupertinoPageRoute(
                     builder: (BuildContext context)
                     {
-                      return new GirliesProfile();
+                      return new Profile();
                     }));
               },
             ),
+
+            //Map
             new ListTile(
               leading: new CircleAvatar(
-                child: new Icon(Icons.home,
+                child: new Icon(Icons.map,
                   color: Colors.white,
                   size: 20.0,
                 ),
               ),
-              title: new Text("Delivery Address"),
+              title: new Text("Map"),
               onTap: ()
               {
                 Navigator.of(context).push(new CupertinoPageRoute(
                     builder: (BuildContext context)
                     {
-                      return new GirliesDelivery();
+                      return new Map();
                     }));
               },
             ),
@@ -259,7 +269,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.of(context).push(new CupertinoPageRoute(
                     builder: (BuildContext context)
                     {
-                      return new GirliesAboutUs();
+                      return new AboutUs();
                     }));
               },
             ),
@@ -270,13 +280,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   size: 20.0,
                 ),
               ),
-              title: new Text("Login"),
+              title: new Text("Logout"),
               onTap: ()
               {
                 Navigator.of(context).push(new CupertinoPageRoute(
                     builder: (BuildContext context)
                     {
-                      return new GirliesLogin();
+                      return new Logout();
                     }));
               },
             ),

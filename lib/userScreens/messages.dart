@@ -12,7 +12,7 @@ class _GirliesmessagesState extends State<Girliesmessages> {
         title: new Text("Messages"),
         centerTitle: false,
       ),
-      body: new Center(child: new Text(
+      body: new Center(child: new Text( 
         "My Messages",
         style: new TextStyle(fontSize: 25.0),
       ),

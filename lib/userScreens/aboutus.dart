@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-class GirliesAboutUs extends StatefulWidget {
+class AboutUs extends StatefulWidget {
   @override
-  _GirliesAboutUsState createState() => _GirliesAboutUsState();
+  _AboutUs createState() => _AboutUs();
 }
 
-class _GirliesAboutUsState extends State<GirliesAboutUs> {
+class _AboutUs extends State<AboutUs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        title: new Text("AboutUs"),
+        title: new Text("About us"),
         centerTitle: false,
       ),
       body: new Center(
-        child: new Text("My AboutUs",
+        child: new Text("About us",
           style: new TextStyle(fontSize: 25.0),
         ),
       ),

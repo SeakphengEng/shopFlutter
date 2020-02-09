@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-class GirliesHistory extends StatefulWidget {
+class Map extends StatefulWidget {
   @override
-  _GirliesHistoryState createState() => _GirliesHistoryState();
+  _Map createState() => _Map();
 }
 
-class _GirliesHistoryState extends State<GirliesHistory> {
+class _Map extends State<Map> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        title: new Text("History"),
+        title: new Text("Map"),
         centerTitle: false,
       ),
       body: new Center(
-        child: new Text("My History",
+        child: new Text("Your Location",
           style: new TextStyle(fontSize: 25.0),
         ),
       ),
